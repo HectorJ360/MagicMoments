@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Moments</title>
+    <link rel="shortcut icon" href="icono.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontello.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="carrousel.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <a href="https://api.whatsapp.com/send?phone=5616623374" class="btn-wsp" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    <header>
+    <nav>
+        <div class="menu">
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <ul>
+            <li><a href="index.html" class="activo">INICIO</a></li>
+            <li><a href="paquetes.html">PAQUETES</a></li>
+            <li><a href="ubicanos.html">UBICANOS</a></li>
+        </ul>
+    </div>
+    </nav>
+    </header>
+    <div class="imagen">
+        <div class="centro">
+           <div class="titulo">Crea momentos magicos con tu familia o amistades en</div>
+            <div class="subtitulo">Magic Moments</div>
+            <div class="botones">
+                <button id="redes">Siguenos</button>
+                <button>Resultados</button>
+            </div>
+        </div>
+    </div>
+    <section id="pantalla-dividida">
+		<div class="izquierda">
+			<h1 class="titulo4">Un lugar <br><span class="black">para guardar lo mejor de tu vida</span></h1>
+			<p class="seccion-texto">Conoce el glamour y lo magico con magic moments, Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita qui autem maiores consequatur saepe! Dolorem illum non voluptates minus, labore harum! Exercitationem, quae quasi libero sunt fuga magni eum suscipit?
+			</p>
+		</div>
+		<div class="derecha"></div>
+	</section>
+    <br>
+    <div class="titulo">
+        <h1>Retrata el mejor momento de tu vida, con tus seres queridos</h1>
+    </div>
+    <div class="carrousel">
+        <div class="big">
+            <img src="foto1.jpeg" alt="Imagen 1" class="img">
+            <img src="foto2.jpeg" alt="Imagen 2" class="img">
+            <img src="foto3.jpeg" alt="Imagen 2" class="img">
+            <img src="foto4.jpeg" alt="Imagen 2" class="img">
+        </div>
+        <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+            
+        </ul>
+    </div>
+    <script>
+          document.getElementById('redes').addEventListener('click', function() {
+            window.open('https://www.facebook.com/cabina360magicmoments', '_blank');
+        });
+    </script>
+</body>
+</html>

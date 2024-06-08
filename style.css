@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap');
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "AR One Sans", sans-serif;
+}
+::selection{
+    color: black;
+    background: #fff;    
+}
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+nav .menu{
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+}
+.menu .logo img{
+    width: 100px;
+}
+.menu ul{
+    display: inline-flex;
+}
+.menu ul li{
+    list-style: none;
+    margin-left: 7px;
+}
+.menu ul li:first-child{
+    margin-left: 0px;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.3 ease;
+}
+.menu ul li a:hover{
+    color: #000;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+.menu .activo{
+    background-color: #fff;
+    color: #000;
+}
+.imagen{
+    background: url(banner.jpg) no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+.imagen::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.centro{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+.centro .titulo{
+    color: #fff;
+    font-size: 55px;
+    font-weight: 600;
+}
+.centro .subtitulo{
+    color: #fff;
+    font-size: 52px;
+    font-weight: 600;
+}
+.centro .botones{
+    margin-top: 20px;
+}
+.centro .botones button{
+    height: 55px;
+    width: 170px;
+    border-radius: 5px;
+    border:none;
+    border: 2px solid #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.centro .botones button:first-child{
+    color:#fff;
+    background: none;
+}
+.centro .botones button:first-child:hover{
+    background: #fff;
+    color: #000;
+}
+.centro .botones button:last-child{
+    background: #fff;
+    color: #000;
+}
+.texto{
+    background-color: #fff;
+    font-size: 25px;
+    float: left;
+}
+#pantalla-dividida{
+    display: flex;
+}
+.izquierda{
+    background: #fff;
+    height: 100vh;
+    width: 50%;
+}
+.seccion-texto{
+    padding: 15px;
+    font-size: 25px;
+}
+.titulo4{
+    padding: 15px;
+    font-size: 50px;
+}
+.btn-wsp{
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    bottom: 25px;
+    right: 30px;
+    background: #0fdd51;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 45px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    transition:all .5s ease;
+}
+.btn-wsp:hover{
+    text-decoration: none;
+    color: #0fdd51;
+    background-color: #fff;
+    transition: all .5s ease;
+}
+.derecha{
+    background: url(parrafo.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+	}
+@media(max-width: 900px){
+    .menu .logo img{
+        overflow: hidden;
+    }
+    .menu{
+        width: 100%;
+    }
+    .menu ul{
+        display: flex;
+        width: 400px;
+        margin: 80px auto 0 auto;
+        text-align: center;
+
+    }
+    .menu ul li{
+        display: flex;
+    }
+    .redes{
+        width: 80px;
+        display: flex;
+        padding: 100px;
+        background-color: #fffdfd;
+    }
+    .mapa{
+        width: 400px;
+    }
+    .carrousel .big{
+        width: 100%;
+    }
+    
+}
+.carrousel{
+    width: 100%;
+    max-width: 80em;
+    padding: 2em;
+    align-items: center;
+}
+.carrousel .big{
+    width: 100%;
+    display: flex;
+    /*flex-flow: row nowrap;*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+.carrousel .img{
+    padding: 15px;
+    width: 50%;
+    min-height: 10vh;
+    border: 5px solid white;
+}
+.carrousel .puntos{
+    width: 100%;
+    margin: 1em 0 0;
+    padding: .4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.carrousel .punto{
+    width: 2em;
+    height: 2em;
+    margin: 1em 1em 0em;
+    background-color: white;
+    border-radius: 100%;
+}
+.carrousel .punto.activo{
+    background-color: grey;
+}
+.titulo{
+    margin: auto;
+    align-items: center;
+}
+.titulo h1{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.container{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+}
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+.card img{
+    width: 100%;
+    height: 210px;
+}
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido p{
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+.card .contenido h3{
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.card .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #1417e9;
+    border: 1px solid #1417e9;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.card .contenido a:hover{
+    background-color:  #e000f5;
+    border: #e000f5;
+    color: #fff;
+}
+.redes{
+    min-width: 1000px;
+    display: flex;
+    padding: 100px;
+    background-color: #fffdfd;
+}
+.contenedor{
+    display: flex;
+    background-color: #c9c9c9;
+    padding: 25px;
+    border-radius: 50px;
+    margin: auto
+}
+.redes .fa-facebook{
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    background-color: #1417e9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all .4s ease-in-out;
+}
+.redes p{
+    color: rgb(0, 0, 0);
+    display: flex;
+    padding: 25px;
+    font-size: 25px;
+}
+.redes .fa-envelope{
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    background-color: #e914bb;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all .4s ease-in-out;
+}
+.titulo-mapa{
+    background-color: white;
+    color: #000;
+    font-size: 15px;
+    padding: 30px;
+    line-height: 45px;
+    text-align: center;
+}
+.redes .fa-facebook:hover{
+    transform: scale(1.2);
+}
+.redes .fa-envelope:hover{
+    transform: scale(1.2);
+}
